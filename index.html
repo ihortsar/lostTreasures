@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost Treasures</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/models/keyboard.class.js"></script>
+    <script src="./js/models/world.class.js"></script>
+    <script src="./js/game.js"></script>
+    <script src="./js/models/objects.class.js"></script>
+    <script src="./js/models/movable-object.class.js"></script>
+    <script src="./js/models/main-character.class.js"></script>
+    <script src="./js/models/enemy.class.js"></script>
+
+    <script src="./js/models/status.class.js"></script>
+    <script src="./js/models/ammunition.class.js"></script>
+    <script src="./js/models/bgObject.class.js"></script>
+    <script src="./js/models/bossPirate.class.js"></script>
+    <script src="./js/models/treasure.class.js"></script>
+    <script src="./js/models/level.class.js"></script>
+    <script src="./js/models/openTreasure.class.js"></script>
+    <script src="./js/levels/level1"></script>
+    <script src="./js/models/throwing_coconut.class.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/game_background_4/favicon-32x32.png">
+
+
+</head>
+
+<body onload="detectPhonePosition()">
+
+    <div id="rotateDevice" class="displayNone">
+        <img src="img/game_background_4/rotate.png">
+        <img src="img/game_background_4/rotateDevice.jpg">
+        <img src="img/game_background_4/device.png">
+        <span>DEVICE</span>
+    </div>
+
+    <img class="header" src="img/game_background_3/718bab24be603beafd9823d40d9644e0.png">
+
+    <div id="overlay" class="overlay">
+        <div id="controlButtons" class="controlButtons">
+            <div>
+                <img id="goLeft" src="img/game_background_4/arrow-left-4-48.png">
+                <img id="goRight" style="margin-left: 15px;" src="img/game_background_4/arrow-right-4-48.png">
+            </div>
+            <div>
+                <img id="jump" style="margin-right: 33px;" src="img/game_background_4/arrow-up-4-48.png">
+                <img id="shoot" src="img/game_background_4/gun-5-48.png">
+            </div>
+        </div>
+        <canvas id="canvas" width="720" height="480"></canvas>
+        <div class="speakerFullScreen">
+            <img onclick="mute()" src="" id="speaker">
+            <img id="fullScreenImg" onclick="fullScreenSettings()" class="fullScreen displayNone"
+                src="img/game_background_4/full-screen-icon-line-style-any-projects-full-screen-icon-line-style-any-projects-use-website-mobile-app-201140862.webp">
+        </div>
+
+        <div id="gameOver" class="displayNone">
+            <img src="img/game_background_4/gameover.png">
+            <img id="youwon" class="displayNone" src="img/game_background_4/youwon.png">
+            <img id="youlost" class="displayNone" src="img/game_background_4/youlost.png">
+            <img class="replay" onclick="window.location.reload(); replay();" src="img/game_background_4/playagain.png">
+        </div>
+    </div>
+
+
+
+
+    <div id="start" style="background-color: black; border-radius: 10px;">
+        <img class="start" style="padding: 20px;" src="img/game_background_3/61bcf0f64e7bde5ee79892b6d26fd45c.png"
+            onclick="init()">
+    </div>
+
+    <div id="keys" class="keys">
+        <div onclick="openKeysInstruction()" class="key">
+            <img src="img/game_background_4/keys.png">
+        </div>
+        <div onclick="openInstruction()" class="key">
+            <img src="img/game_background_4/i.png">
+        </div>
+    </div>
+
+
+    <div id="instruction" class="displayNone">
+        <img onclick="closeDialogs()" class="closeButton" src="./img/game_background_4/x-mark-24.png">
+        <div class="instructionsContent">
+            To help our brave Bill "Dirty Sock" to get back what was stolen from him
+            jump on enemies to kill them. Keep gathered coconuts to kill Jack "The Hook" who doesn't let Bill get to his
+            treasure.
+            Once Jack "The Hook" is dead Bill can get to the treasure chest!
+        </div>
+    </div>
+
+    <div id="keysInstruction" class="displayNone">
+        <img onclick="closeKeysInstruction()" class="closeButton" src="./img/game_background_4/x-mark-24.png">
+        <div class="keysInstructionsContent">
+            <div class="eachKeyDescript"><span>Run left</span> <span>Arrow left</span></div>
+            <div class="eachKeyDescript"><span>Run right</span> <span>Arrow right</span></div>
+            <div class="eachKeyDescript"><span>Jump</span> <span>Arrow up</span></div>
+            <div class="eachKeyDescript"><span>Shoot</span> <span>Space</span></div>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

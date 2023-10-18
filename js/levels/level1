@@ -1,0 +1,84 @@
+let LEVEL1
+
+
+function initLevel() {
+    LEVEL1 = new Level(
+
+
+
+        [
+
+            new BgObjects('img/game_background_3/layers/sky.png', 260, 0, 0, 0),
+            new BgObjects('img/game_background_2/layers/sea.png', 240, 140, 0.4, -720),
+            new BgObjects('img/game_background_2/layers/sea.png', 240, 140, 0.4, 0),
+            new BgObjects('img/game_background_2/layers/sea.png', 240, 140, 0.4, 717),
+            new BgObjects('img/game_background_2/layers/sea.png', 240, 140, 0.4, 717 * 2),
+            new BgObjects('img/game_background_2/layers/sea.png', 240, 140, 0.4, 717 * 3),
+            new BgObjects('img/game_background_2/layers/sea.png', 240, 140, 0.4, 717 * 4),
+            new BgObjects('img/game_background_2/layers/sea.png', 240, 140, 0.4, 717 * 5),
+            new BgObjects('img/game_background_2/layers/sea.png', 240, 140, 0.4, 717 * 6),
+            new BgObjects('img/game_background_3/layers/sky.png', 260, 0, 0, -720),
+            new BgObjects('img/game_background_3/layers/land.png', 420, 60, 0, -720),
+            new BgObjects('img/game_background_3/layers/decor.png', 380, 60, 0, -720),
+            new BgObjects('img/game_background_3/layers/cloud.png', 260, 0, 0.15, -720),
+            new BgObjects('img/game_background_3/layers/land.png', 420, 60, 0, 0),
+            new BgObjects('img/game_background_3/layers/decor.png', 380, 60, 0, 0),
+            new BgObjects('img/game_background_3/layers/cloud.png', 260, 0, 0.15, 0),
+
+
+            new BgObjects('img/game_background_3/layers/sky.png', 260, 0, 0, 720),
+            new BgObjects('img/game_background_3/layers/land.png', 420, 60, 0, 720),
+            new BgObjects('img/game_background_3/layers/decor.png', 380, 60, 0, 720),
+            new BgObjects('img/game_background_3/layers/cloud.png', 260, 0, 0.15, 720),
+
+            new BgObjects('img/game_background_3/layers/sky.png', 260, 0, 0, 720 * 2),
+            new BgObjects('img/game_background_3/layers/land.png', 420, 60, 0, 720 * 2),
+            new BgObjects('img/game_background_3/layers/decor.png', 380, 60, 0, 720 * 2),
+            new BgObjects('img/game_background_3/layers/cloud.png', 260, 0, 0.15, 720 * 2),
+
+            new BgObjects('img/game_background_3/layers/sky.png', 260, 0, 0, 720 * 3),
+            new BgObjects('img/game_background_3/layers/land.png', 420, 60, 0, 720 * 3),
+            new BgObjects('img/game_background_3/layers/decor.png', 380, 60, 0, 720 * 3),
+            new BgObjects('img/game_background_3/layers/cloud.png', 260, 0, 0.15, 720 * 3),
+
+            new BgObjects('img/game_background_3/layers/sky.png', 260, 0, 0, 720 * 4),
+            new BgObjects('img/game_background_3/layers/land.png', 420, 60, 0, 720 * 4),
+            new BgObjects('img/game_background_3/layers/decor.png', 380, 60, 0, 720 * 4),
+            new BgObjects('img/game_background_3/layers/cloud.png', 260, 0, 0.15, 720 * 4),
+
+            new BgObjects('img/game_background_3/layers/sky.png', 260, 0, 0, 720 * 5),
+            new BgObjects('img/game_background_3/layers/land.png', 420, 60, 0, 720 * 5),
+            new BgObjects('img/game_background_3/layers/decor.png', 380, 60, 0, 720 * 5),
+            new BgObjects('img/game_background_3/layers/cloud.png', 260, 0, 0.15, 720 * 5),
+
+
+        ],
+        [
+            new Ammunition(),
+            new Ammunition(),
+            new Ammunition(),
+            new Ammunition(),
+            new Ammunition(),
+            new Ammunition(),
+            new Ammunition(),
+            new Ammunition(),
+            new Ammunition(),
+        ],
+        enemies = [
+            new Enemy(),
+            new Enemy(),
+            new Enemy(),
+            new Enemy(),
+            new Enemy(),
+            new Enemy(),
+            new Enemy(),
+            new Enemy(),
+            new Enemy(),
+            new Enemy(),
+        ]
+    )
+}
+
+
+
+
